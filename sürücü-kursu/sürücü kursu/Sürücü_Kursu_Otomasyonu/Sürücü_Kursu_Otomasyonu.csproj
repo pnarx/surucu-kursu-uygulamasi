@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{50624703-F76E-4BD6-9A12-23D7343A2B91}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sürücü_Kursu_Otomasyonu</RootNamespace>
+    <AssemblyName>Sürücü_Kursu_Otomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdayBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdayBilgileri.Designer.cs">
+      <DependentUpon>AdayBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ayarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ayarlar.Designer.cs">
+      <DependentUpon>ayarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islemler.cs" />
+    <Compile Include="kisiselBilgiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kisiselBilgiler.Designer.cs">
+      <DependentUpon>kisiselBilgiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullanicigiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullanicigiris.Designer.cs">
+      <DependentUpon>kullanicigiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KursiyerArama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KursiyerArama.Designer.cs">
+      <DependentUpon>KursiyerArama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kursiyerKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kursiyerKayit.Designer.cs">
+      <DependentUpon>kursiyerKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotBilgisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotBilgisi.Designer.cs">
+      <DependentUpon>NotBilgisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotGirisi.Designer.cs">
+      <DependentUpon>NotGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NüfusBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NüfusBilgileri.Designer.cs">
+      <DependentUpon>NüfusBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdemeGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeGirisi.Designer.cs">
+      <DependentUpon>OdemeGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="personelBilgisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="personelBilgisi.Designer.cs">
+      <DependentUpon>personelBilgisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="personelBilgiveKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="personelBilgiveKayit.Designer.cs">
+      <DependentUpon>personelBilgiveKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="raporFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raporFormu.Designer.cs">
+      <DependentUpon>raporFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporSürücüKursu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RaporSürücüKursu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sürücü_Kursu_OtomasyonuDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sürücü_Kursu_OtomasyonuDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sürücü_Kursu_OtomasyonuDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sürücü_Kursu_OtomasyonuDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sürücü_Kursu_OtomasyonuDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sürücü_Kursu_OtomasyonuDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sürücü_Kursu_OtomasyonuDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Veritabani.cs" />
+    <Compile Include="Ödemeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ödemeler.Designer.cs">
+      <DependentUpon>Ödemeler.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdayBilgileri.resx">
+      <DependentUpon>AdayBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ayarlar.resx">
+      <DependentUpon>ayarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kisiselBilgiler.resx">
+      <DependentUpon>kisiselBilgiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullanicigiris.resx">
+      <DependentUpon>kullanicigiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KursiyerArama.resx">
+      <DependentUpon>KursiyerArama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kursiyerKayit.resx">
+      <DependentUpon>kursiyerKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotBilgisi.resx">
+      <DependentUpon>NotBilgisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotGirisi.resx">
+      <DependentUpon>NotGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NüfusBilgileri.resx">
+      <DependentUpon>NüfusBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeGirisi.resx">
+      <DependentUpon>OdemeGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="personelBilgisi.resx">
+      <DependentUpon>personelBilgisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="personelBilgiveKayit.resx">
+      <DependentUpon>personelBilgiveKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="raporFormu.resx">
+      <DependentUpon>raporFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporSürücüKursu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RaporSürücüKursu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ödemeler.resx">
+      <DependentUpon>Ödemeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="frm.Designer.login" />
+    <None Include="frm.login">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet11.xsc">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sürücü_Kursu_OtomasyonuDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet11.xss">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet2.xsc">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sürücü_Kursu_OtomasyonuDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet2.xss">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet21.xsc">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sürücü_Kursu_OtomasyonuDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet21.xss">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet3.xsc">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sürücü_Kursu_OtomasyonuDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet3.xss">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet4.xsc">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sürücü_Kursu_OtomasyonuDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet4.xss">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet5.xsc">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sürücü_Kursu_OtomasyonuDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet5.xss">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet6.xsc">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sürücü_Kursu_OtomasyonuDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sürücü_Kursu_OtomasyonuDataSet6.xss">
+      <DependentUpon>Sürücü_Kursu_OtomasyonuDataSet6.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Başlıksız-1-Kurtarıldı.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Başlıksız-1-Kurtarıldı1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sürücükursulogo-Kurtarıldı.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sürücükursulogo-Kurtarıldı1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sürücükursulogo-Kurtarıldı2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sürücükursulogo-Kurtarıldı3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-icon-17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-New_user_icon-01.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
