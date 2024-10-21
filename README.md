@@ -26,7 +26,6 @@ Bu uygulamayı çalıştırmak için aşağıdaki adımları izleyin:
 3. Projeyi açın ve derleyin.
 4. Uygulamayı çalıştırmak için F5 tuşuna basın.
 
-
-![Başlıksız-1-Kurtarıldı](https://github.com/user-attachments/assets/afedc9b0-31d7-4cb1-be39-dc8e2a14c2ab)
+(https://github.com/user-attachments/assets/afedc9b0-31d7-4cb1-be39-dc8e2a14c2ab)
 
  
